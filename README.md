@@ -1,54 +1,80 @@
-<<<<<<< HEAD
-# React + TypeScript + Vite
+# React Calculator Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+This is a simple **React-based Calculator Application** built using **Vite** and **TypeScript**. It follows the **SOLID principles** to ensure modularity, scalability, and maintainability.
 
-Currently, two official plugins are available:
+## Features
+- Perform basic arithmetic operations (+, -, *, /)
+- Keyboard input support
+- Clear button to delete last input
+- Responsive UI with separate components for display and buttons
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- **React** (UI framework)
+- **TypeScript** (Strong typing)
+- **Vite** (Fast build tool)
+- **CSS** (Styling)
 
-## Expanding the ESLint configuration
+## Installation
+### Prerequisites
+Ensure you have **Node.js** and **npm/yarn** installed on your system.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Steps
+1. Clone the repository:
+   ```sh
+   git clone <repository-url>
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd react-calculator
+   ```
+3. Install dependencies:
+   ```sh
+   npm install  # or yarn install
+   ```
+4. Start the development server:
+   ```sh
+   npm run dev  # or yarn dev
+   ```
+5. Open your browser and go to:
+   ```
+   http://localhost:5173  # Default Vite port
+   ```
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Project Structure
+```
+react-calculator/
+├── src/
+│   ├── components/
+│   │   ├── Button.tsx
+│   │   ├── Display.tsx
+│   ├── hooks/
+│   │   ├── useCalculator.ts
+│   ├── utils/
+│   │   ├── calculate.ts
+│   ├── App.tsx
+│   ├── main.tsx
+│   ├── index.css
+├── public/
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## SOLID Principles Applied
+- **SRP (Single Responsibility Principle):** Separate components for UI, logic, and calculations.
+- **OCP (Open/Closed Principle):** Easily extend functionalities without modifying existing code.
+- **LSP (Liskov Substitution Principle):** Calculation logic can be swapped without affecting the UI.
+- **ISP (Interface Segregation Principle):** Components are designed to be independent and focused.
+- **DIP (Dependency Inversion Principle):** The UI (`App.tsx`) depends on `useCalculator.ts` abstraction rather than direct logic.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+## Deployment
+To build and deploy the project:
+```sh
+npm run build  # or yarn build
 ```
-=======
-# CleanCode_SOLID
->>>>>>> 6cc24c8b880343d22fe84daff77bc7bc68685ff9
+
+## Author
+Developed by **Pranav Bharti** 🚀
+
